@@ -20,4 +20,4 @@ For more info on how to contribute please see the [contribution guidelines](http
 
 
 ## License 
-Feather is licensed under the [MIT License](https://github.com/Bosch-0/Bitcoin-Icons/blob/main/LICENSE).
+Bitcoin Icons is licensed under the [MIT License](https://github.com/Bosch-0/Bitcoin-Icons/blob/main/LICENSE).
