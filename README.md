@@ -3,7 +3,7 @@
 
 
 ## What is Bitcoin Icons?
-Bitcoin Icons is an Open source set of icons made for Bitcoin centric applications
+Bitcoin Icons is an Open source set of icons made for Bitcoin centric applications. Once enough icon additions are made to the repo a live web app will be hosted through github pages at bitcoinicons.com. 
 
 
 
