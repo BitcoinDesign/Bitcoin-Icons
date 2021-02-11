@@ -7,12 +7,6 @@ Bitcoin Icons is an open source set of icons made for Bitcoin centric applicatio
 
 
 
-## Figma
-Bitcoin icons is available as a Figma component library. To use the components, log in to your Figma account and duplicate the file to your drafts. 
-
-- Develop a Figma plugin 
-
-
 ## Contributing 
 For more info on how to contribute please see the [contribution guidelines](https://github.com/Bosch-0/Bitcoin-Icons/blob/main/CONTRIBUTING.md).
 
