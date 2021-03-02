@@ -1,3 +1,6 @@
+![banner image](https://github.com/Bosch-0/Bitcoin-Icons/blob/main/img/Cover.png)
+
+
 # Bitcoin Icons (WIP)
 
 
