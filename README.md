@@ -1,16 +1,11 @@
-# Bitcoin Icons
+# Bitcoin Icons (WIP)
 
 
 
 ## What is Bitcoin Icons?
-Bitcoin Icons is an open source set of icons made for Bitcoin centric applications. Once enough icon additions are made to the repo a live web app will be hosted through github pages at bitcoinicons.com. 
+Bitcoin Icons is an open source set of icons made for Bitcoin centric applications. Bitcoin Icons is a sister project of the [Bitcoin Wallet UI Kit](https://www.figma.com/file/VB3GQdAnhl8yta44DY3PSV/Bitcoin-Wallet-UI-Kit) created by [GBKS](https://github.com/GBKS). The icon set can be found in this Figma file as well as this GitHub repo. 
 
 
 
 ## Contributing 
-For more info on how to contribute please see the [contribution guidelines](https://github.com/Bosch-0/Bitcoin-Icons/blob/main/CONTRIBUTING.md).
-
-
-
-## License 
-Bitcoin Icons is licensed under the [MIT License](https://github.com/Bosch-0/Bitcoin-Icons/blob/main/LICENSE).
+For info on how to contribute please see the [contribution guidelines](https://github.com/Bosch-0/Bitcoin-Icons/blob/main/CONTRIBUTING.md).
