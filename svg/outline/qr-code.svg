@@ -12,16 +12,7 @@
 <rect x="21.9999" y="14" width="1" height="1" fill="black"/>
 <rect x="22" y="17.5" width="1" height="1" fill="black"/>
 <rect x="21.9999" y="21" width="1" height="1" fill="black"/>
-<mask id="path-14-inside-1" fill="white">
-<rect x="8" y="7" width="4.5" height="4.5" rx="0.833333"/>
-</mask>
-<rect x="8" y="7" width="4.5" height="4.5" rx="0.833333" stroke="black" stroke-width="2" mask="url(#path-14-inside-1)"/>
-<mask id="path-15-inside-2" fill="white">
-<rect x="8" y="17.5" width="4.5" height="4.5" rx="0.833333"/>
-</mask>
-<rect x="8" y="17.5" width="4.5" height="4.5" rx="0.833333" stroke="black" stroke-width="2" mask="url(#path-15-inside-2)"/>
-<mask id="path-16-inside-3" fill="white">
-<rect x="18.5" y="7" width="4.5" height="4.5" rx="0.833333"/>
-</mask>
-<rect x="18.5" y="7" width="4.5" height="4.5" rx="0.833333" stroke="black" stroke-width="2" mask="url(#path-16-inside-3)"/>
+<rect x="8.5" y="7.5" width="3.5" height="3.5" rx="0.5" stroke="black"/>
+<rect x="8.5" y="18" width="3.5" height="3.5" rx="0.5" stroke="black"/>
+<rect x="18.9886" y="7.4903" width="3.5" height="3.5" rx="0.5" stroke="black"/>
 </svg>
