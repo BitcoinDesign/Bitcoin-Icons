@@ -5,6 +5,7 @@ figma.root.appendChild(page);
 // Get all nodes that are components and begin with "Icon/"
 const nodes = figma.currentPage.findAll(node => node.name.indexOf('Icon/') === 0 && node.type == 'COMPONENT_SET');
 const newNodes = [];
+const iconData = {};
 let x = 0;
 let y = 0;
 // Create instance of each component and variant
@@ -59,6 +60,19 @@ for (const node of nodes) {
                         page.appendChild(nodeInstance);
                         // Keep track of instances for selection.
                         newNodes.push(nodeInstance);
+                        const iconName = newName.split('/')[1];
+                        const folderName = newName.split('/')[0];
+                        let iconInfo = iconData[iconName];
+                        if (!iconInfo) {
+                            iconInfo = {
+                                name: node.name.split('/')[1]
+                            };
+                        }
+                        iconInfo[folderName] = true;
+                        if (node.description) {
+                            iconInfo.description = node.description;
+                        }
+                        iconData[iconName] = iconInfo;
                         x++;
                         // Reset the row every 10 icons
                         if (x >= 10) {
@@ -75,6 +89,13 @@ for (const node of nodes) {
 page.selection = newNodes;
 // Go to our new page.
 figma.currentPage = page;
+// Create a text node to store JSON data.
+const textNode = figma.createText();
+textNode.x = 450;
+textNode.resize(1000, 1000);
+figma.loadFontAsync({ family: "Roboto", style: "Regular" }).then(() => {
+    textNode.characters = JSON.stringify(iconData);
+});
 // Make sure to close the plugin when you're done. Otherwise the plugin will
 // keep running, which shows the cancel button at the bottom of the screen.
 figma.closePlugin();
