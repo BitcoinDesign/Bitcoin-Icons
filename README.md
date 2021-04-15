@@ -13,3 +13,15 @@ Bitcoin Icons is a sister project of the [Bitcoin Wallet UI Kit](https://www.fig
 ## Contributing
 
 For info on how to contribute please see the [contribution guidelines](https://github.com/Bosch-0/Bitcoin-Icons/blob/main/CONTRIBUTING.md).
+
+## Node Module
+
+The node module is still in development. For now, you can install it and then pull
+the SVGs into a build system such as Gulp. In the future, there may be more options
+for importing the icons, such as font files, javascript imports, etc.
+
+To install the node module pre-release version, run:
+
+```
+npm install @bitcoin-design/bitcoin-icons
+```
