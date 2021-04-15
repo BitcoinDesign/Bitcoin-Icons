@@ -1,0 +1,23 @@
+{
+  "name": "@bitcoin-design/bitcoin-icons",
+  "version": "0.0.1",
+  "description": "About",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BitcoinDesign/Bitcoin-Icons.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "icons"
+  ],
+  "author": "Bitcoin Design Community",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BitcoinDesign/Bitcoin-Icons/issues"
+  },
+  "homepage": "https://github.com/BitcoinDesign/Bitcoin-Icons#readme"
+}
