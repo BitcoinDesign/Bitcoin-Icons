@@ -1,18 +1,18 @@
-<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="15" y="14" width="1" height="1" fill="black"/>
-<rect x="15" y="10.5" width="1" height="1" fill="black"/>
-<rect x="11.5" y="14" width="1" height="1" fill="black"/>
-<rect x="8" y="14" width="1" height="1" fill="black"/>
-<rect x="15" y="7" width="1" height="1" fill="black"/>
-<rect x="15" y="17.5" width="1" height="1" fill="black"/>
-<rect x="15" y="21" width="1" height="1" fill="black"/>
-<rect x="18.5" y="14" width="1" height="1" fill="black"/>
-<rect x="18.5" y="17.5" width="1" height="1" fill="black"/>
-<rect x="18.5" y="21" width="1" height="1" fill="black"/>
-<rect x="21.9999" y="14" width="1" height="1" fill="black"/>
-<rect x="22" y="17.5" width="1" height="1" fill="black"/>
-<rect x="21.9999" y="21" width="1" height="1" fill="black"/>
-<rect x="8.5" y="7.5" width="3.5" height="3.5" rx="0.5" stroke="black"/>
-<rect x="8.5" y="18" width="3.5" height="3.5" rx="0.5" stroke="black"/>
-<rect x="18.9886" y="7.4903" width="3.5" height="3.5" rx="0.5" stroke="black"/>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="5.5" y="5.5" width="3.5" height="3.5" stroke="black"/>
+<rect x="15" y="5.5" width="3.5" height="3.5" stroke="black"/>
+<rect x="5.5" y="15" width="3.5" height="3.5" stroke="black"/>
+<rect x="5.375" y="11.625" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
+<rect x="8.375" y="11.625" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
+<rect x="11.5416" y="11.625" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
+<rect x="11.5416" y="14.75" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
+<rect x="11.5416" y="17.875" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
+<rect x="11.5416" y="8.5" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
+<rect x="11.5416" y="5.375" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
+<rect x="14.7083" y="11.625" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
+<rect x="17.8749" y="11.625" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
+<rect x="14.7083" y="14.75" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
+<rect x="17.8749" y="14.75" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
+<rect x="14.7083" y="17.875" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
+<rect x="17.8749" y="17.875" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
 </svg>

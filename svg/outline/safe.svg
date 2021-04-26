@@ -1,11 +1,9 @@
-<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="5.5" y="5.5" width="19" height="19" rx="0.5" stroke="black"/>
-<rect x="8.5" y="8.5" width="13" height="13" rx="0.5" stroke="black"/>
-<path d="M8.5 24.5H10.5V25.45C10.5 25.4776 10.4776 25.5 10.45 25.5H8.55C8.52239 25.5 8.5 25.4776 8.5 25.45V24.5Z" stroke="black"/>
-<path d="M19.5 24.5H21.5V25.45C21.5 25.4776 21.4776 25.5 21.45 25.5H19.55C19.5224 25.5 19.5 25.4776 19.5 25.45V24.5Z" stroke="black"/>
-<circle cx="15" cy="15" r="2.5" stroke="black"/>
-<rect x="10.4" y="18.8853" width="4" height="1" rx="0.5" transform="rotate(-45 10.4 18.8853)" fill="black"/>
-<rect x="16.0569" y="13.2284" width="4" height="1" rx="0.5" transform="rotate(-45 16.0569 13.2284)" fill="black"/>
-<rect x="11.1072" y="10.4" width="4" height="1" rx="0.5" transform="rotate(45 11.1072 10.4)" fill="black"/>
-<rect x="16.764" y="16.0569" width="4" height="1" rx="0.5" transform="rotate(45 16.764 16.0569)" fill="black"/>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="5.5" y="5.5" width="13" height="12.9393" rx="1" stroke="black"/>
+<rect x="7.5" y="7.5" width="9" height="9" rx="0.5" stroke="black"/>
+<path d="M7 19H9V19.5778C9 19.811 8.81096 20 8.57778 20H7.42222C7.18904 20 7 19.811 7 19.5778V19Z" fill="black"/>
+<path d="M15 19H17V19.5778C17 19.811 16.811 20 16.5778 20H15.4222C15.189 20 15 19.811 15 19.5778V19Z" fill="black"/>
+<circle cx="12" cy="12" r="1.75" fill="black"/>
+<path d="M9.5 9.5L14.5 14.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.5 14.5L14.5 9.5" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
