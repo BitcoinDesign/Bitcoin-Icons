@@ -1,1 +1,5 @@
+.DS_Store
 /figma-plugins/icon-export-helper/node_modules
+/node_modules
+/outline
+/filled
