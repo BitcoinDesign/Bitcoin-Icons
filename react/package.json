@@ -1,0 +1,27 @@
+{
+    "name": "@bitcoin-design/bitcoin-icons-react",
+    "version": "0.1.0",
+    "description": "",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/BitcoinDesign/Bitcoin-Icons.git"
+    },
+    "keywords": [
+      "bitcoin",
+      "icons",
+      "react"
+    ],
+    "author": "Bitcoin Design Community",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/BitcoinDesign/Bitcoin-Icons/issues"
+    },
+    "peerDependencies": {
+      "react": ">= 16"
+    },
+    "publishConfig": {
+      "access": "public"
+    },
+    "homepage": "https://github.com/BitcoinDesign/Bitcoin-Icons#readme"
+  }
+  
