@@ -10,6 +10,14 @@ let svgX = 0;
 let svgY = 0;
 let pngX = 0;
 let pngY = 0;
+function toPascalCase(string) {
+    return `${string}`
+        .replace(new RegExp(/[-_]+/, 'g'), ' ')
+        .replace(new RegExp(/[^\w\s]/, 'g'), '')
+        .replace(new RegExp(/\s+(.)(\w+)/, 'g'), ($1, $2, $3) => `${$2.toUpperCase() + $3.toLowerCase()}`)
+        .replace(new RegExp(/\s/, 'g'), '')
+        .replace(new RegExp(/\w/), s => s.toUpperCase());
+}
 function exportComponentAsSVG(node, nodeVariant, subFolder) {
     const nodeInstance = nodeVariant.createInstance();
     // Position nicely, assuming a 40x40 grid.
@@ -49,6 +57,7 @@ function exportComponentAsSVG(node, nodeVariant, subFolder) {
     if (node.description) {
         iconInfo.description = node.description;
     }
+    iconInfo.id = toPascalCase(iconName);
     iconData[iconName] = iconInfo;
     svgX++;
     // Reset the row every 10 icons
