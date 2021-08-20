@@ -19,7 +19,7 @@ function toPascalCase(string) {
         .replace(new RegExp(/\w/), s => s.toUpperCase());
 }
 function exportComponentAsSVG(node, nodeVariant, subFolder) {
-    const nodeInstance = nodeVariant.createInstance();
+    let nodeInstance = nodeVariant.createInstance();
     // Position nicely, assuming a 40x40 grid.
     nodeInstance.x += svgX * 40;
     nodeInstance.y += svgY * 40;
@@ -42,6 +42,10 @@ function exportComponentAsSVG(node, nodeVariant, subFolder) {
     ];
     // Add instance to our new page.
     page.appendChild(nodeInstance);
+    // Detach from main component.
+    nodeInstance = nodeInstance.detachInstance();
+    // Loop over children, delete hidden and flatten boolean groups
+    cleanIcon(nodeInstance);
     // Keep track of instances for selection.
     newNodes.push(nodeInstance);
     const iconName = newName.split('/')[2];
@@ -64,6 +68,38 @@ function exportComponentAsSVG(node, nodeVariant, subFolder) {
     if (svgX >= 10) {
         svgX = 0;
         svgY += 1;
+    }
+}
+function cleanIcon(nodeInstance, name = null) {
+    if (!name) {
+        name = nodeInstance.name;
+    }
+    else {
+        name += '.' + nodeInstance.name;
+    }
+    // console.log('cleanIcon', nodeInstance, nodeInstance.children)
+    let child, stuff;
+    for (let i = 0; i < nodeInstance.children.length; i++) {
+        child = nodeInstance.children[i];
+        console.log('type', i, child, child.type, name);
+        if (child.visible !== true) {
+            child.remove();
+        }
+        else if (child.type == 'GROUP') {
+            cleanIcon(child);
+        }
+        else if (child.type == 'BOOLEAN_OPERATION') {
+            console.log('i', i, child, child.name, name, child.children);
+            if (child.children.length > 0) {
+                try {
+                    stuff = figma.flatten([child], child.parent);
+                }
+                catch (error) {
+                    console.log('error', error);
+                }
+            }
+            //console.log('flattened', child, child.parent, stuff)
+        }
     }
 }
 function exportComponentAsPNG(node, nodeVariant, subFolder) {
