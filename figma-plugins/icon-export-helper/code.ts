@@ -9,6 +9,7 @@ const nodes = figma.currentPage.findAll(node => node.name.indexOf('Icon/') === 0
 
 const newNodes = []
 const iconData = {}
+const problematicIcons = {}
 
 let svgX = 0
 let svgY = 0
@@ -59,8 +60,16 @@ function exportComponentAsSVG(node, nodeVariant, subFolder) {
 	// Detach from main component.
 	nodeInstance = nodeInstance.detachInstance()
 
-	// Loop over children, delete hidden and flatten boolean groups
-	cleanIcon(nodeInstance)
+	// Delete hidden children
+	deleteHiddenChildren(nodeInstance)
+
+	flattenBooleanGroups(nodeInstance)
+
+	flattenRotatedGroupsOnFilledIcon(nodeInstance)
+
+	outlineStrokesOnFilledIcon(nodeInstance)
+
+	checkIcon(nodeInstance)
 
 	// Keep track of instances for selection.
 	newNodes.push(nodeInstance)
@@ -96,29 +105,180 @@ function exportComponentAsSVG(node, nodeVariant, subFolder) {
 	}
 }
 
-// Prepares SVGs for export
-// - Deletes hidden children
-// - Flattens boolean groups
-function cleanIcon(nodeInstance) {
-	let child, stuff
+// Deletes hidden children
+function deleteHiddenChildren(nodeInstance) {
+	let child
 	for(let i=0; i<nodeInstance.children.length; i++) {
 		child = nodeInstance.children[i]
 
 		if(child.visible !== true) {
-			// Delete invisible children.
+			// Delete invisible child.
 			child.remove()
 		} else if(child.type == 'GROUP') {
 			// If it's a group, go deeper.
-			cleanIcon(child)
-		} else if(child.type == 'BOOLEAN_OPERATION') {
+			deleteHiddenChildren(child)
+		}
+	}
+}
+
+// Flattens boolean groups
+function flattenBooleanGroups(nodeInstance, fullNodeName = null) {
+	if(!fullNodeName) {
+		fullNodeName = nodeInstance.name
+	} else {
+		fullNodeName += '/' + nodeInstance.name
+	}
+
+	// console.log('flattenBooleanGroups', nodeInstance, fullNodeName)
+
+	let child, flattenedChild
+	for(let i=0; i<nodeInstance.children.length; i++) {
+		child = nodeInstance.children[i]
+
+		if(child.type == 'GROUP') {
+			// If it's a group, go deeper.
+			flattenBooleanGroups(child, fullNodeName)
+		} else if(child.type == 'BOOLEAN_OPERATION' && child.visible !== false) {
 			// Flatten boolean groups.
 			if(child.children.length > 0) {
 				try {
-					stuff = figma.flatten([child], child.parent)
+					// console.log('f', child, child.name, child.visible, fullNodeName)
+					flattenedChild = figma.flatten([child], child.parent, i)
+
+					// console.log('flattenedChild', flattenedChild, flattenedChild.fills, fullNodeName, flattenedChild.name)
 				} catch(error) {
 					console.log('error', error)
 				}
 			}
+		}
+	}
+}
+
+function flattenRotatedGroupsOnFilledIcon(nodeInstance, fullNodeName = null) {
+	if(!fullNodeName) {
+		fullNodeName = nodeInstance.name
+	} else {
+		fullNodeName += '/' + nodeInstance.name
+	}
+
+	let child, flattenedChild
+	if(nodeInstance.children) {
+		for(let i=0; i<nodeInstance.children.length; i++) {
+			child = nodeInstance.children[i]
+
+			flattenedChild = null
+
+			if(fullNodeName.indexOf('filled') !== -1 && child.rotation != 0) {
+				// Flatten boolean groups.
+				try {
+					flattenedChild = figma.flatten([child], child.parent, i)
+				} catch(error) {
+					console.log('error', error)
+				}
+			}
+			
+			if(flattenedChild) {
+				if(flattenedChild.type == 'GROUP') {
+					// If it's a group, go deeper.
+					flattenRotatedGroupsOnFilledIcon(flattenedChild, fullNodeName)
+				}
+			} else if(child) {
+				if(child.type == 'GROUP') {
+					// If it's a group, go deeper.
+					flattenRotatedGroupsOnFilledIcon(child, fullNodeName)
+				}
+			}
+		}
+	}
+}
+
+function outlineStrokesOnFilledIcon(nodeInstance, fullNodeName = null) {
+	if(!fullNodeName) {
+		fullNodeName = nodeInstance.name
+	} else {
+		fullNodeName += '/' + nodeInstance.name
+	}
+
+	// console.log('flattenStrokesOnFilledIcon', nodeInstance, fullNodeName)
+
+	let child, flattenedChild, newChild
+	if(nodeInstance.children) {
+		for(let i=0; i<nodeInstance.children.length; i++) {
+			child = nodeInstance.children[i]
+
+			// console.log('i', fullNodeName, child.name, child.strokes)
+
+			if(child.type == 'GROUP') {
+				// If it's a group, go deeper.
+				outlineStrokesOnFilledIcon(child, fullNodeName)
+			} else if(fullNodeName.indexOf('filled') !== -1 && child.strokes && child.strokes.length > 0) {
+				// Flattening a stroke on a filled icon
+				// console.log('Flatting stroke', fullNodeName, child.name)
+				try {
+					newChild = child.outlineStroke()
+
+					child.parent.insertChild(i, newChild)
+
+					newChild.x = child.x
+					newChild.y = child.y
+
+					child.remove()	
+
+				} catch(error) {
+					console.log('error', error)
+				}
+			}
+		}
+	}
+}
+
+// Checks if icons are clean
+// Outline icon shapes should not have fills
+// Filled icon shapes should not have outlines
+function checkIcon(nodeInstance, fullNodeName = null) {
+	if(!fullNodeName) {
+		fullNodeName = nodeInstance.name
+	} else {
+		fullNodeName += '/' + nodeInstance.name
+	}
+
+	const trimmedName = fullNodeName.split('/').splice(0, 3).join('/')
+
+	if(fullNodeName.indexOf('outline') !== -1 && nodeInstance.fills && nodeInstance.fills.length > 0) {
+		// console.log('Outline icon "' + fullNodeName + '" has fills - fix it!')
+
+		// if(!problematicIcons[trimmedName]) {
+		// 	problematicIcons[trimmedName] = {}
+		// }
+
+		// problematicIcons[trimmedName]['fill-on-outline-icon'] = true
+
+	}
+
+	if(fullNodeName.indexOf('filled') !== -1 && nodeInstance.strokes && nodeInstance.strokes.length > 0) {
+		// console.log('Filled icon "' + fullNodeName + '" has strokes - fix it!')
+
+		if(!problematicIcons[trimmedName]) {
+			problematicIcons[trimmedName] = {}
+		}
+		
+		problematicIcons[trimmedName]['outline-on-filled-icon'] = true
+	}
+
+	if(fullNodeName.indexOf('filled') !== -1 && nodeInstance.type == 'GROUP' && nodeInstance.rotation != 0) {
+		if(!problematicIcons[trimmedName]) {
+			problematicIcons[trimmedName] = {}
+		}
+
+		problematicIcons[trimmedName]['rotated-group'] = true
+	}
+
+	if(nodeInstance.children) {
+		let child
+		for(let i=0; i<nodeInstance.children.length; i++) {
+			child = nodeInstance.children[i]
+
+			checkIcon(child, fullNodeName)
 		}
 	}
 }
@@ -204,6 +364,8 @@ for (const node of nodes) {
 		}
 	}
 }
+
+console.log('Problematic icons', problematicIcons)
 
 // Select our new instances for easy export.
 page.selection = newNodes
