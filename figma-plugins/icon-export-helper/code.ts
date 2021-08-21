@@ -114,6 +114,7 @@ function deleteHiddenChildren(nodeInstance) {
 		if(child.visible !== true) {
 			// Delete invisible child.
 			child.remove()
+			i--
 		} else if(child.type == 'GROUP') {
 			// If it's a group, go deeper.
 			deleteHiddenChildren(child)
@@ -168,24 +169,26 @@ function flattenRotatedGroupsOnFilledIcon(nodeInstance, fullNodeName = null) {
 
 			flattenedChild = null
 
-			if(fullNodeName.indexOf('filled') !== -1 && child.rotation != 0) {
-				// Flatten boolean groups.
-				try {
-					flattenedChild = figma.flatten([child], child.parent, i)
-				} catch(error) {
-					console.log('error', error)
+			if(child.visble === true) {
+				if(fullNodeName.indexOf('filled') !== -1 && child.rotation != 0) {
+					// Flatten boolean groups.
+					try {
+						flattenedChild = figma.flatten([child], child.parent, i)
+					} catch(error) {
+						console.log('error', error)
+					}
 				}
-			}
-			
-			if(flattenedChild) {
-				if(flattenedChild.type == 'GROUP') {
-					// If it's a group, go deeper.
-					flattenRotatedGroupsOnFilledIcon(flattenedChild, fullNodeName)
-				}
-			} else if(child) {
-				if(child.type == 'GROUP') {
-					// If it's a group, go deeper.
-					flattenRotatedGroupsOnFilledIcon(child, fullNodeName)
+				
+				if(flattenedChild) {
+					if(flattenedChild.type == 'GROUP') {
+						// If it's a group, go deeper.
+						flattenRotatedGroupsOnFilledIcon(flattenedChild, fullNodeName)
+					}
+				} else if(child) {
+					if(child.type == 'GROUP') {
+						// If it's a group, go deeper.
+						flattenRotatedGroupsOnFilledIcon(child, fullNodeName)
+					}
 				}
 			}
 		}
@@ -208,24 +211,26 @@ function outlineStrokesOnFilledIcon(nodeInstance, fullNodeName = null) {
 
 			// console.log('i', fullNodeName, child.name, child.strokes)
 
-			if(child.type == 'GROUP') {
-				// If it's a group, go deeper.
-				outlineStrokesOnFilledIcon(child, fullNodeName)
-			} else if(fullNodeName.indexOf('filled') !== -1 && child.strokes && child.strokes.length > 0) {
-				// Flattening a stroke on a filled icon
-				// console.log('Flatting stroke', fullNodeName, child.name)
-				try {
-					newChild = child.outlineStroke()
+			if(child.visble === true) {
+				if(child.type == 'GROUP') {
+					// If it's a group, go deeper.
+					outlineStrokesOnFilledIcon(child, fullNodeName)
+				} else if(fullNodeName.indexOf('filled') !== -1 && child.strokes && child.strokes.length > 0) {
+					// Flattening a stroke on a filled icon
+					// console.log('Flatting stroke', fullNodeName, child.name)
+					try {
+						newChild = child.outlineStroke()
 
-					child.parent.insertChild(i, newChild)
+						child.parent.insertChild(i, newChild)
 
-					newChild.x = child.x
-					newChild.y = child.y
+						newChild.x = child.x
+						newChild.y = child.y
 
-					child.remove()	
+						child.remove()	
 
-				} catch(error) {
-					console.log('error', error)
+					} catch(error) {
+						console.log('error', error)
+					}
 				}
 			}
 		}
@@ -247,30 +252,17 @@ function checkIcon(nodeInstance, fullNodeName = null) {
 	if(fullNodeName.indexOf('outline') !== -1 && nodeInstance.fills && nodeInstance.fills.length > 0) {
 		// console.log('Outline icon "' + fullNodeName + '" has fills - fix it!')
 
-		// if(!problematicIcons[trimmedName]) {
-		// 	problematicIcons[trimmedName] = {}
-		// }
-
-		// problematicIcons[trimmedName]['fill-on-outline-icon'] = true
-
+		logIconProblem(trimmedName, 'fill-on-outline-icon')
 	}
 
 	if(fullNodeName.indexOf('filled') !== -1 && nodeInstance.strokes && nodeInstance.strokes.length > 0) {
 		// console.log('Filled icon "' + fullNodeName + '" has strokes - fix it!')
 
-		if(!problematicIcons[trimmedName]) {
-			problematicIcons[trimmedName] = {}
-		}
-		
-		problematicIcons[trimmedName]['outline-on-filled-icon'] = true
+		logIconProblem(trimmedName, 'outline-on-filled-icon')
 	}
 
 	if(fullNodeName.indexOf('filled') !== -1 && nodeInstance.type == 'GROUP' && nodeInstance.rotation != 0) {
-		if(!problematicIcons[trimmedName]) {
-			problematicIcons[trimmedName] = {}
-		}
-
-		problematicIcons[trimmedName]['rotated-group'] = true
+		logIconProblem(trimmedName, 'rotated-group')
 	}
 
 	if(nodeInstance.children) {
@@ -278,9 +270,19 @@ function checkIcon(nodeInstance, fullNodeName = null) {
 		for(let i=0; i<nodeInstance.children.length; i++) {
 			child = nodeInstance.children[i]
 
-			checkIcon(child, fullNodeName)
+			if(child.visble === true) {
+				checkIcon(child, fullNodeName)
+			}
 		}
 	}
+}
+
+function logIconProblem(name, problem) {
+	if(!problematicIcons[name]) {
+		problematicIcons[name] = {}
+	}
+
+	problematicIcons[name][problem] = true
 }
 
 function exportComponentAsPNG(node, nodeVariant, subFolder) {
