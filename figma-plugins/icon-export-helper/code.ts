@@ -169,7 +169,7 @@ function flattenRotatedGroupsOnFilledIcon(nodeInstance, fullNodeName = null) {
 
 			flattenedChild = null
 
-			if(child.visble === true) {
+			if(child.visible === true) {
 				if(fullNodeName.indexOf('filled') !== -1 && child.rotation != 0) {
 					// Flatten boolean groups.
 					try {
@@ -202,29 +202,41 @@ function outlineStrokesOnFilledIcon(nodeInstance, fullNodeName = null) {
 		fullNodeName += '/' + nodeInstance.name
 	}
 
-	// console.log('flattenStrokesOnFilledIcon', nodeInstance, fullNodeName)
+	// console.log('outlineStrokesOnFilledIcon', nodeInstance, fullNodeName)
+	// console.log('nodeInstance.children', nodeInstance.children)
 
 	let child, flattenedChild, newChild
 	if(nodeInstance.children) {
 		for(let i=0; i<nodeInstance.children.length; i++) {
 			child = nodeInstance.children[i]
 
-			// console.log('i', fullNodeName, child.name, child.strokes)
+			// console.log('i', i, fullNodeName, child)
+			// console.log('child.name', child.name)
+			// console.log('child.visible', child.visible)
+			// console.log('child.type', child.type)
+			// console.log('child.strokes', child.strokes)
+			// console.log('child.children', child.children)
 
-			if(child.visble === true) {
+			if(child.visible === true) {
 				if(child.type == 'GROUP') {
 					// If it's a group, go deeper.
+					// console.log('Go deeper', child, fullNodeName, child.children, child.name)
 					outlineStrokesOnFilledIcon(child, fullNodeName)
 				} else if(fullNodeName.indexOf('filled') !== -1 && child.strokes && child.strokes.length > 0) {
 					// Flattening a stroke on a filled icon
 					// console.log('Flatting stroke', fullNodeName, child.name)
+					
 					try {
 						newChild = child.outlineStroke()
 
+						// console.log('newChild', newChild, child.strokes, child.strokeWeight)
+
 						child.parent.insertChild(i, newChild)
 
-						newChild.x = child.x
-						newChild.y = child.y
+						// The new position needs to be offset by half the stroke weight.
+						// Turning the vector into a shape affects the boundary box. 
+						newChild.x = child.x - child.strokeWeight / 2
+						newChild.y = child.y - child.strokeWeight / 2
 
 						child.remove()	
 
@@ -270,7 +282,7 @@ function checkIcon(nodeInstance, fullNodeName = null) {
 		for(let i=0; i<nodeInstance.children.length; i++) {
 			child = nodeInstance.children[i]
 
-			if(child.visble === true) {
+			if(child.visible === true) {
 				checkIcon(child, fullNodeName)
 			}
 		}
@@ -356,6 +368,11 @@ for (const node of nodes) {
 								break;
 						}
 					}
+
+					// For testing individual icons.
+					// if(node.name.indexOf('Arrow right') === -1) {
+					// 	exportIcon = false
+					// }
 
 					if(exportIcon === true) {
 						exportComponentAsSVG(node, nodeVariant, subFolder)
