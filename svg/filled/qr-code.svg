@@ -2,17 +2,17 @@
 <rect x="5.75" y="5.75" width="3" height="3" stroke="black" stroke-width="1.5"/>
 <rect x="15.2499" y="5.75" width="3" height="3" stroke="black" stroke-width="1.5"/>
 <rect x="5.75" y="15.25" width="3" height="3" stroke="black" stroke-width="1.5"/>
-<rect x="5.375" y="11.625" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
-<rect x="8.375" y="11.625" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
-<rect x="11.5416" y="11.625" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
-<rect x="11.5416" y="14.75" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
-<rect x="11.5416" y="17.875" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
-<rect x="11.5416" y="8.5" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
-<rect x="11.5416" y="5.375" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
-<rect x="14.7083" y="11.625" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
-<rect x="17.8749" y="11.625" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
-<rect x="14.7083" y="14.75" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
-<rect x="17.8749" y="14.75" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
-<rect x="14.7083" y="17.875" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
-<rect x="17.8749" y="17.875" width="0.75" height="0.75" stroke="black" stroke-width="0.75"/>
+<rect x="5" y="11.25" width="1.5" height="1.5" fill="black"/>
+<rect x="8" y="11.25" width="1.5" height="1.5" fill="black"/>
+<rect x="11.1666" y="11.25" width="1.5" height="1.5" fill="black"/>
+<rect x="11.1666" y="14.375" width="1.5" height="1.5" fill="black"/>
+<rect x="11.1666" y="17.5" width="1.5" height="1.5" fill="black"/>
+<rect x="11.1666" y="8.125" width="1.5" height="1.5" fill="black"/>
+<rect x="11.1666" y="5" width="1.5" height="1.5" fill="black"/>
+<rect x="14.3333" y="11.25" width="1.5" height="1.5" fill="black"/>
+<rect x="17.4999" y="11.25" width="1.5" height="1.5" fill="black"/>
+<rect x="14.3333" y="14.375" width="1.5" height="1.5" fill="black"/>
+<rect x="17.4999" y="14.375" width="1.5" height="1.5" fill="black"/>
+<rect x="14.3333" y="17.5" width="1.5" height="1.5" fill="black"/>
+<rect x="17.4999" y="17.5" width="1.5" height="1.5" fill="black"/>
 </svg>
