@@ -1,3 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-  <path stroke="#000" stroke-linecap="round" stroke-width="1.5" d="M19.152 12H4.85"/>
+  <path fill-rule="evenodd" d="M4.85 11.25h14.302a.75.75 0 110 1.5H4.85a.75.75 0 010-1.5z" clip-rule="evenodd"/>
 </svg>
