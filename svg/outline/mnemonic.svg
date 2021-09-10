@@ -1,15 +1,15 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="5.5" y="5.5" width="13" height="13" rx="1" stroke="black"/>
-<rect x="7" y="7" width="2.5" height="1.5" fill="black"/>
-<rect x="7" y="9.83334" width="2.5" height="1.5" fill="black"/>
-<rect x="7" y="12.6667" width="2.5" height="1.5" fill="black"/>
-<rect x="7" y="15.5" width="2.5" height="1.5" fill="black"/>
-<rect x="10.75" y="7" width="2.5" height="1.5" fill="black"/>
-<rect x="10.75" y="9.83334" width="2.5" height="1.5" fill="black"/>
-<rect x="10.75" y="12.6667" width="2.5" height="1.5" fill="black"/>
-<rect x="10.75" y="15.5" width="2.5" height="1.5" fill="black"/>
-<rect x="14.5" y="7" width="2.5" height="1.5" fill="black"/>
-<rect x="14.5" y="9.83334" width="2.5" height="1.5" fill="black"/>
-<rect x="14.5" y="12.6667" width="2.5" height="1.5" fill="black"/>
-<rect x="14.5" y="15.5" width="2.5" height="1.5" fill="black"/>
+<path d="M15 16H16.5" stroke="black" stroke-linecap="round"/>
+<path d="M11.5 16H13" stroke="black" stroke-linecap="round"/>
+<path d="M8 16H9.5" stroke="black" stroke-linecap="round"/>
+<path d="M15 13.3333H16.5" stroke="black" stroke-linecap="round"/>
+<path d="M11.5 13.3333H13" stroke="black" stroke-linecap="round"/>
+<path d="M8 13.3334H9.5" stroke="black" stroke-linecap="round"/>
+<path d="M15 10.6667H16.5" stroke="black" stroke-linecap="round"/>
+<path d="M11.5 10.6667H13" stroke="black" stroke-linecap="round"/>
+<path d="M8 10.6667H9.5" stroke="black" stroke-linecap="round"/>
+<path d="M15 8H16.5" stroke="black" stroke-linecap="round"/>
+<path d="M11.5 8H13" stroke="black" stroke-linecap="round"/>
+<path d="M8 8H9.5" stroke="black" stroke-linecap="round"/>
 </svg>
