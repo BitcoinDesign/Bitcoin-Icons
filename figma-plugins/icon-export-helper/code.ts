@@ -40,8 +40,10 @@ function exportComponentAsSVG(node, nodeVariant, subFolder) {
 	// "Icon/Bitcoin circle" with variant "Style=Outline" becomes
 	// "outline/bitcoin-circle"
 	let newName = 'svg/' + subFolder + node.name.split('/')[1]
-	newName = newName.toLowerCase().replace(' ', '-')
+	newName = newName.toLowerCase().replace(/ /g, '-')
 	nodeInstance.name = newName
+
+	console.log('newName', newName)
 
 	nodeInstance.exportSettings = [
 		{
@@ -309,7 +311,7 @@ function exportComponentAsPNG(node, nodeVariant, subFolder) {
 	// "Icon/Bitcoin circle" with variant "Style=Outline" becomes
 	// "outline/bitcoin-circle"
 	let newName = 'png/' + subFolder + node.name.split('/')[1]
-	newName = newName.toLowerCase().replace(' ', '-')
+	newName = newName.toLowerCase().replace(/ /g, '-')
 	nodeInstance.name = newName
 
 	nodeInstance.exportSettings = [
