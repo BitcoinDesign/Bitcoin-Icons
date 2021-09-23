@@ -48,7 +48,7 @@ There is a [simple test project](https://github.com/GBKS/bitcoin-icons-react-tes
 ```
 npm i
 npm uninstall @bitcoin-design/bitcoin-icons-react
-npm install /Users/christoph/workspace/Bitcoin-Icons/react
+npm install {{ your workspace directory }}/Bitcoin-Icons/react
 npm start
 ```
 
