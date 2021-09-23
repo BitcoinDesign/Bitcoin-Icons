@@ -43,9 +43,10 @@ npm run serve
 
 ### 5. Test the React module
 
-We don't have a test project for React (yet).
+There is a [simple test project](https://github.com/GBKS/bitcoin-icons-react-test) you can use.
 
 ```
+npm i
 npm uninstall @bitcoin-design/bitcoin-icons-react
 npm install /Users/christoph/workspace/Bitcoin-Icons/react
 npm start
