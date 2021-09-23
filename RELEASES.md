@@ -37,7 +37,7 @@ Locally verify icons render correctly. You can use the [bitcoinicons.com](https:
 This is an example of installing the pre-published module and running the site.
 ```
 npm uninstall @bitcoin-design/bitcoin-icons-vue
-npm install /Users/christoph/workspace/Bitcoin-Icons/vue
+npm install {{ your workspace directory }}/Bitcoin-Icons/vue
 npm run serve
 ```
 
