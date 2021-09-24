@@ -12,7 +12,7 @@ Bitcoin Icons is a sister project of the [Bitcoin Wallet UI Kit](https://www.fig
 
 ## Contributing
 
-For info on how to contribute please see the [contribution guidelines](https://github.com/Bosch-0/Bitcoin-Icons/blob/main/CONTRIBUTING.md).
+For info on how to contribute please see the [contribution guidelines](CONTRIBUTING.md). Also see details on the [release process](RELEASES.md).
 
 ## Node Module
 
@@ -27,6 +27,9 @@ npm install @bitcoin-design/bitcoin-icons
 ```
 
 ## React
+
+[![npm version](https://img.shields.io/npm/v/@bitcoin-design/bitcoin-icons-react.svg?style=flat-square)](https://www.npmjs.com/package/@bitcoin-design/bitcoin-icons-react)
+[![npm downloads](https://img.shields.io/npm/dm/@bitcoin-design/bitcoin-icons-react.svg?style=flat-square)](https://www.npmjs.com/package/@bitcoin-design/bitcoin-icons-react)
 
 First, install `@bitcoin-design/bitcoin-icons-react` from npm:
 
@@ -55,6 +58,9 @@ Icons use an upper camel case naming convention and are always suffixed with the
 
 
 ## Vue
+
+[![npm version](https://img.shields.io/npm/v/@bitcoin-design/bitcoin-icons-vue.svg?style=flat-square)](https://www.npmjs.com/package/@bitcoin-design/bitcoin-icons-vue)
+[![npm downloads](https://img.shields.io/npm/dm/@bitcoin-design/bitcoin-icons-vue.svg?style=flat-square)](https://www.npmjs.com/package/@bitcoin-design/bitcoin-icons-vue)
 
 *Note that this library currently only supports Vue 3.*
 
