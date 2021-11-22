@@ -4,12 +4,19 @@ page.name = "Icons for export"
 
 figma.root.appendChild(page);
 
-// Get all nodes that are components and begin with "Icon/"
-const nodes = figma.currentPage.findAll(node => node.name.indexOf('Icon/') === 0 && node.type == 'COMPONENT_SET')
+let nodes
+if(figma.currentPage.selection && figma.currentPage.selection.length > 0) {
+	// Go over nodes the user has selected
+	nodes = figma.currentPage.selection
+} else {
+	// Get all nodes that are components and begin with "Icon/"
+	nodes = figma.currentPage.findAll(node => node.name.indexOf('Icon/') === 0 && node.type == 'COMPONENT_SET')
+}
 
 const newNodes = []
 const iconData = {}
 const problematicIcons = {}
+let processedIcons = 0
 
 let svgX = 0
 let svgY = 0
@@ -377,6 +384,8 @@ for (const node of nodes) {
 					// }
 
 					if(exportIcon === true) {
+						processedIcons++
+
 						exportComponentAsSVG(node, nodeVariant, subFolder)
 						exportComponentAsPNG(node, nodeVariant, subFolder)
 					}
@@ -387,6 +396,7 @@ for (const node of nodes) {
 }
 
 console.log('Problematic icons', problematicIcons)
+console.log('Processed icons', processedIcons)
 
 // Select our new instances for easy export.
 page.selection = newNodes
@@ -401,8 +411,6 @@ textNode.resize(1000, 1000)
 
 figma.loadFontAsync({ family: "Roboto", style: "Regular" }).then(() => {
 	textNode.characters = JSON.stringify(iconData)
-})
 
-// Make sure to close the plugin when you're done. Otherwise the plugin will
-// keep running, which shows the cancel button at the bottom of the screen.
-figma.closePlugin()
+	figma.closePlugin()
+})
