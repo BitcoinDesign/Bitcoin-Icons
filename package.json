@@ -9,7 +9,9 @@
     "build-react": "node ./scripts/build.js react",
     "build-vue": "node ./scripts/build.js vue",
     "build-outline": "rimraf ./outline ./optimized/outline && svgo --config=svgo.outline.js -f ./svg/outline -o ./optimized/outline && cp -R ./optimized/outline ./outline",
-    "build-filled": "rimraf ./filled ./optimized/filled && svgo --config=svgo.filled.js -f ./svg/filled -o ./optimized/filled && cp -R ./optimized/filled ./filled"
+    "build-filled": "rimraf ./filled ./optimized/filled && svgo --config=svgo.filled.js -f ./svg/filled -o ./optimized/filled && cp -R ./optimized/filled ./filled",
+    "test-react": "cp ./data/icons.json ./tests/react-test/src/icons.json && cd tests/react-test && npm i && npm run start",
+    "test-vue": "cp ./data/icons.json ./tests/vue-test/src/icons.json && cd tests/vue-test && npm i && npm run serve"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

@@ -1,0 +1,22 @@
+.App {
+  display: block;
+  margin: auto;
+  width: 75%;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.icons {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.icons li {
+  text-align: center;
+  padding: 1rem;
+  flex-basis: 16rem;
+  border: 1px solid #ccc;
+}

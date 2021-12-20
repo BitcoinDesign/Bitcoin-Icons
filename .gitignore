@@ -3,3 +3,4 @@
 /node_modules
 /outline
 /filled
+tests/**/icons.json
