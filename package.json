@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
-    "@babel/plugin-transform-react-jsx": "^7.12.12",
+    "@babel/plugin-transform-react-jsx": "^7.16.5",
     "@svgr/core": "^5.4.0",
     "@svgr/plugin-jsx": "^5.4.0",
     "@svgr/plugin-prettier": "^5.4.0",
