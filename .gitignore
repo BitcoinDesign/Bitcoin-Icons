@@ -4,3 +4,5 @@
 /outline
 /filled
 tests/**/icons.json
+/tmp-react-comps
+*.tgz

@@ -5,23 +5,36 @@
   "main": "index.js",
   "scripts": {
     "prepublishOnly": "npm run build",
-    "build": "npm run build-outline && npm run build-filled && npm run build-react && npm run build-vue",
+    "build": "npm run build-outline && npm run build-filled && npm run build-react && npm run build-vue && npm run build-react-native",
     "build-react": "node ./scripts/build.js react",
     "build-vue": "node ./scripts/build.js vue",
-    "build-outline": "rimraf ./outline ./optimized/outline && svgo --config=svgo.outline.js -f ./svg/outline -o ./optimized/outline && cp -R ./optimized/outline ./outline",
-    "build-filled": "rimraf ./filled ./optimized/filled && svgo --config=svgo.filled.js -f ./svg/filled -o ./optimized/filled && cp -R ./optimized/filled ./filled",
+    "build-outline": "rimraf ./outline ./optimized/outline && svgo --config=svgo.outline.js -f ./svg/outline -o ./optimized/outline",
+    "build-filled": "rimraf ./filled ./optimized/filled && svgo --config=svgo.filled.js -f ./svg/filled -o ./optimized/filled",
     "test-react": "cp ./data/icons.json ./tests/react-test/src/icons.json && cd tests/react-test && npm i && npm run start",
     "test-vue": "cp ./data/icons.json ./tests/vue-test/src/icons.json && cd tests/vue-test && npm i && npm run serve",
-    "test-react-native": "cp ./data/icons.json ./tests/react-native-test/icons.json && cd tests/react-native-test && npm i && npm run start"
+    "test-react-native": "cp ./data/icons.json ./tests/react-native-test/icons.json && cd ./react-native && npm pack && mv bitcoin-design-*.tgz bitcoin-icons-react-native.tgz && cd ../tests/react-native-test && npm i && npm run start",
+    "gen-react-comps": "ts-node --project scripts/generate-react-components/tsconfig.json --files scripts/generate-react-components/build.ts",
+    "compile-react-native": "rimraf react-native/filled && rimraf react-native/outline && node scripts/compile-react-native/compile-react-native.js && tsc -p scripts/generate-type-declarations/tsconfig.json --emitDeclarationOnly --outDir ./react-native && cp react-native/filled/*.d.ts react-native/filled/esm && cp react-native/outline/*.d.ts react-native/outline/esm",
+    "build-react-native": "npm run gen-react-comps && npm run compile-react-native && rimraf ./tmp-react-comps"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/plugin-transform-react-jsx": "^7.12.12",
-    "@svgr/core": "^5.5.0",
+    "@svgr/core": "^5.4.0",
+    "@svgr/plugin-jsx": "^5.4.0",
+    "@svgr/plugin-prettier": "^5.4.0",
+    "@svgr/plugin-svgo": "^5.4.0",
     "@vue/compiler-dom": "^3.0.5",
-    "camelcase": "^6.0.0",
+    "camelcase": "^6.2.1",
+    "junk": "^3.1.0",
     "rimraf": "^3.0.2",
-    "svgo": "^2.8.0"
+    "svgo": "^2.8.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4",
+    "tiny-glob": "^0.2.9",
+    "react-native-svg": "^12.1.0",
+    "@types/react": "^17.0.32",
+    "esbuild": "^0.13.9"
   },
   "repository": {
     "type": "git",
