@@ -25,7 +25,7 @@
     "@svgr/plugin-prettier": "^5.4.0",
     "@svgr/plugin-svgo": "^5.4.0",
     "@types/react": "^17.0.37",
-    "@vue/compiler-dom": "^3.0.5",
+    "@vue/compiler-dom": "^3.2.26",
     "camelcase": "^6.2.1",
     "esbuild": "^0.13.9",
     "junk": "^3.1.0",
