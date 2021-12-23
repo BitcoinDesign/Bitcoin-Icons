@@ -29,7 +29,7 @@
     "camelcase": "^6.2.1",
     "esbuild": "^0.13.9",
     "junk": "^3.1.0",
-    "react-native-svg": "^12.1.0",
+    "react-native-svg": "^12.1.1",
     "rimraf": "^3.0.2",
     "svgo": "^2.8.0",
     "tiny-glob": "^0.2.9",
