@@ -1,0 +1,1112 @@
+{
+  "satoshi-v2":
+  {
+    "name": "Satoshi V2",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "SatoshiV2",
+    "png": true,
+    "outline": true
+  },
+  "satoshi-v1":
+  {
+    "name": "Satoshi V1",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "SatoshiV1",
+    "png": true,
+    "outline": true
+  },
+  "proxy":
+  {
+    "name": "Proxy",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows",
+    "id": "Proxy",
+    "png": true,
+    "outline": true
+  },
+  "mixed":
+  {
+    "name": "Mixed",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows,mix,coinjoin",
+    "id": "Mixed",
+    "png": true,
+    "outline": true
+  },
+  "unmixed":
+  {
+    "name": "Unmixed",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows,coinjoin",
+    "id": "Unmixed",
+    "png": true,
+    "outline": true
+  },
+  "flip-horizontal":
+  {
+    "name": "Flip horizontal",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows",
+    "id": "FlipHorizontal",
+    "png": true,
+    "outline": true
+  },
+  "flip-vertical":
+  {
+    "name": "Flip vertical",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows",
+    "id": "FlipVertical",
+    "png": true,
+    "outline": true
+  },
+  "exit":
+  {
+    "name": "Exit",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows",
+    "id": "Exit",
+    "png": true,
+    "outline": true
+  },
+  "transfer":
+  {
+    "name": "Transfer",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows",
+    "id": "Transfer",
+    "png": true,
+    "outline": true
+  },
+  "send":
+  {
+    "name": "Send",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows,export",
+    "id": "Send",
+    "png": true,
+    "outline": true
+  },
+  "receive":
+  {
+    "name": "Receive",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows,download,import",
+    "id": "Receive",
+    "png": true,
+    "outline": true
+  },
+  "arrow-up":
+  {
+    "name": "Arrow up",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows",
+    "id": "ArrowUp",
+    "png": true,
+    "outline": true
+  },
+  "arrow-down":
+  {
+    "name": "Arrow down",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows",
+    "id": "ArrowDown",
+    "png": true,
+    "outline": true
+  },
+  "arrow-right":
+  {
+    "name": "Arrow right",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows,forward",
+    "id": "ArrowRight",
+    "png": true,
+    "outline": true
+  },
+  "arrow-left":
+  {
+    "name": "Arrow left",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows,back",
+    "id": "ArrowLeft",
+    "png": true,
+    "outline": true
+  },
+  "minus":
+  {
+    "name": "Minus",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows,subtract,remove,collapse",
+    "id": "Minus",
+    "png": true,
+    "outline": true
+  },
+  "plus":
+  {
+    "name": "Plus",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows,add,increase,expand",
+    "id": "Plus",
+    "png": true,
+    "outline": true
+  },
+  "cross":
+  {
+    "name": "Cross",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows,delete,remove",
+    "id": "Cross",
+    "png": true,
+    "outline": true
+  },
+  "check":
+  {
+    "name": "Check",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows,confirm,ok",
+    "id": "Check",
+    "png": true,
+    "outline": true
+  },
+  "caret-left":
+  {
+    "name": "Caret left",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows,back",
+    "id": "CaretLeft",
+    "png": true,
+    "outline": true
+  },
+  "trash":
+  {
+    "name": "Trash",
+    "filled": true,
+    "svg": true,
+    "description": "*general,bin,delete",
+    "id": "Trash",
+    "png": true,
+    "outline": true
+  },
+  "console":
+  {
+    "name": "Console",
+    "filled": true,
+    "svg": true,
+    "description": "*general,terminal",
+    "id": "Console",
+    "png": true,
+    "outline": true
+  },
+  "link":
+  {
+    "name": "Link",
+    "filled": true,
+    "svg": true,
+    "description": "*general,chain",
+    "id": "Link",
+    "png": true,
+    "outline": true
+  },
+  "magic-wand":
+  {
+    "name": "Magic wand",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "MagicWand",
+    "png": true,
+    "outline": true
+  },
+  "snowflake":
+  {
+    "name": "Snowflake",
+    "filled": true,
+    "svg": true,
+    "description": "*general,freeze",
+    "id": "Snowflake",
+    "png": true,
+    "outline": true
+  },
+  "exchange":
+  {
+    "name": "Exchange",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Exchange",
+    "png": true,
+    "outline": true
+  },
+  "no-dollars":
+  {
+    "name": "No dollars",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "NoDollars",
+    "png": true,
+    "outline": true
+  },
+  "usb":
+  {
+    "name": "USB",
+    "filled": true,
+    "svg": true,
+    "description": "*general,hardware",
+    "id": "Usb",
+    "png": true,
+    "outline": true
+  },
+  "edit":
+  {
+    "name": "Edit",
+    "filled": true,
+    "svg": true,
+    "description": "*general,pen,pencil",
+    "id": "Edit",
+    "png": true,
+    "outline": true
+  },
+  "clock":
+  {
+    "name": "Clock",
+    "filled": true,
+    "svg": true,
+    "description": "*general,time",
+    "id": "Clock",
+    "png": true,
+    "outline": true
+  },
+  "menu":
+  {
+    "name": "Menu",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Menu",
+    "png": true,
+    "outline": true
+  },
+  "info":
+  {
+    "name": "Info",
+    "filled": true,
+    "svg": true,
+    "description": "*general,help",
+    "id": "Info",
+    "png": true,
+    "outline": true
+  },
+  "alert":
+  {
+    "name": "Alert",
+    "filled": true,
+    "svg": true,
+    "description": "*general,warning",
+    "id": "Alert",
+    "png": true,
+    "outline": true
+  },
+  "question":
+  {
+    "name": "Question",
+    "filled": true,
+    "svg": true,
+    "description": "*general,help",
+    "id": "Question",
+    "png": true,
+    "outline": true
+  },
+  "clear-character":
+  {
+    "name": "Clear character",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "ClearCharacter",
+    "png": true,
+    "outline": true
+  },
+  "car":
+  {
+    "name": "Car",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Car",
+    "png": true,
+    "outline": true
+  },
+  "sofa":
+  {
+    "name": "Sofa",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Sofa",
+    "png": true,
+    "outline": true
+  },
+  "milk":
+  {
+    "name": "Milk",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Milk",
+    "png": true,
+    "outline": true
+  },
+  "hidden":
+  {
+    "name": "Hidden",
+    "filled": true,
+    "svg": true,
+    "description": "*general,hide",
+    "id": "Hidden",
+    "png": true,
+    "outline": true
+  },
+  "visible":
+  {
+    "name": "Visible",
+    "filled": true,
+    "svg": true,
+    "description": "*general,show",
+    "id": "Visible",
+    "png": true,
+    "outline": true
+  },
+  "safe":
+  {
+    "name": "Safe",
+    "filled": true,
+    "svg": true,
+    "description": "*general,vault",
+    "id": "Safe",
+    "png": true,
+    "outline": true
+  },
+  "shared-wallet":
+  {
+    "name": "Shared wallet",
+    "filled": true,
+    "svg": true,
+    "description": "*general,hardware,device",
+    "id": "SharedWallet",
+    "png": true,
+    "outline": true
+  },
+  "cart":
+  {
+    "name": "Cart",
+    "filled": true,
+    "svg": true,
+    "description": "*general,buy",
+    "id": "Cart",
+    "png": true,
+    "outline": true
+  },
+  "export":
+  {
+    "name": "Export",
+    "filled": true,
+    "svg": true,
+    "description": "*general,share,send",
+    "id": "Export",
+    "png": true,
+    "outline": true
+  },
+  "ellipsis":
+  {
+    "name": "Ellipsis",
+    "filled": true,
+    "svg": true,
+    "description": "*general, menu",
+    "id": "Ellipsis",
+    "png": true,
+    "outline": true
+  },
+  "sd-card":
+  {
+    "name": "SD Card",
+    "filled": true,
+    "svg": true,
+    "description": "*general,hardware",
+    "id": "SdCard",
+    "png": true,
+    "outline": true
+  },
+  "file":
+  {
+    "name": "File",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "File",
+    "png": true,
+    "outline": true
+  },
+  "copy":
+  {
+    "name": "Copy",
+    "filled": true,
+    "svg": true,
+    "description": "*general,paste",
+    "id": "Copy",
+    "png": true,
+    "outline": true
+  },
+  "grid":
+  {
+    "name": "Grid",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Grid",
+    "png": true,
+    "outline": true
+  },
+  "scan":
+  {
+    "name": "Scan",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Scan",
+    "png": true,
+    "outline": true
+  },
+  "qr-code":
+  {
+    "name": "QR code",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "QrCode",
+    "png": true,
+    "outline": true
+  },
+  "password":
+  {
+    "name": "Password",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Password",
+    "png": true,
+    "outline": true
+  },
+  "search":
+  {
+    "name": "Search",
+    "filled": true,
+    "svg": true,
+    "description": "*general,magnify",
+    "id": "Search",
+    "png": true,
+    "outline": true
+  },
+  "cloud":
+  {
+    "name": "Cloud",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Cloud",
+    "png": true,
+    "outline": true
+  },
+  "share":
+  {
+    "name": "Share",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Share",
+    "png": true,
+    "outline": true
+  },
+  "home":
+  {
+    "name": "Home",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Home",
+    "png": true,
+    "outline": true
+  },
+  "contacts":
+  {
+    "name": "Contacts",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Contacts",
+    "png": true,
+    "outline": true
+  },
+  "gear":
+  {
+    "name": "Gear",
+    "filled": true,
+    "svg": true,
+    "description": "*general,settings",
+    "id": "Gear",
+    "png": true,
+    "outline": true
+  },
+  "miner":
+  {
+    "name": "Miner",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin,mining",
+    "id": "Miner",
+    "png": true,
+    "outline": true
+  },
+  "mining":
+  {
+    "name": "Mining",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Mining",
+    "png": true,
+    "outline": true
+  },
+  "node-3-connections":
+  {
+    "name": "Node 3 connections",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Node3Connections",
+    "png": true,
+    "outline": true
+  },
+  "node-2-connections":
+  {
+    "name": "Node 2 connections",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Node2Connections",
+    "png": true,
+    "outline": true
+  },
+  "node-1-connection":
+  {
+    "name": "Node 1 connection",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Node1Connection",
+    "png": true,
+    "outline": true
+  },
+  "node-0-connections":
+  {
+    "name": "Node 0 connections",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Node0Connections",
+    "png": true,
+    "outline": true
+  },
+  "node":
+  {
+    "name": "Node",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Node",
+    "png": true,
+    "outline": true
+  },
+  "node-hardware":
+  {
+    "name": "Node hardware",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "NodeHardware",
+    "png": true,
+    "outline": true
+  },
+  "block":
+  {
+    "name": "Block",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Block",
+    "png": true,
+    "outline": true
+  },
+  "devices":
+  {
+    "name": "Devices",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin,hardware",
+    "id": "Devices",
+    "png": true,
+    "outline": true
+  },
+  "two-keys":
+  {
+    "name": "Two keys",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin, multisig, vault",
+    "id": "TwoKeys",
+    "png": true,
+    "outline": true
+  },
+  "key":
+  {
+    "name": "Key",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Key",
+    "png": true,
+    "outline": true
+  },
+  "mnemonic":
+  {
+    "name": "Mnemonic",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin,seed,recovery phrase",
+    "id": "Mnemonic",
+    "png": true,
+    "outline": true
+  },
+  "wallet":
+  {
+    "name": "Wallet",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin, account",
+    "id": "Wallet",
+    "png": true,
+    "outline": true
+  },
+  "lightning":
+  {
+    "name": "Lightning",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Lightning",
+    "png": true,
+    "outline": true
+  },
+  "bitcoin":
+  {
+    "name": "Bitcoin",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Bitcoin",
+    "png": true,
+    "outline": true
+  },
+  "bitcoin-circle":
+  {
+    "name": "Bitcoin circle",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "BitcoinCircle",
+    "png": true,
+    "outline": true
+  },
+  "lock":
+  {
+    "name": "Lock",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Lock",
+    "png": true,
+    "outline": true
+  },
+  "unlock":
+  {
+    "name": "Unlock",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Unlock",
+    "png": true,
+    "outline": true
+  },
+  "caret-up":
+  {
+    "name": "Caret up",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows,up",
+    "id": "CaretUp",
+    "png": true,
+    "outline": true
+  },
+  "caret-down":
+  {
+    "name": "Caret down",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows,down",
+    "id": "CaretDown",
+    "png": true,
+    "outline": true
+  },
+  "caret-right":
+  {
+    "name": "Caret right",
+    "filled": true,
+    "svg": true,
+    "description": "*arrows,forward",
+    "id": "CaretRight",
+    "png": true,
+    "outline": true
+  },
+  "graph":
+  {
+    "name": "Graph",
+    "filled": true,
+    "svg": true,
+    "description": "*general,chart",
+    "id": "Graph",
+    "png": true,
+    "outline": true
+  },
+  "shield":
+  {
+    "name": "Shield",
+    "filled": true,
+    "svg": true,
+    "description": "*general,privacy",
+    "id": "Shield",
+    "png": true,
+    "outline": true
+  },
+  "channels":
+  {
+    "name": "Channels",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Channels",
+    "png": true,
+    "outline": true
+  },
+  "channel":
+  {
+    "name": "Channel",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Channel",
+    "png": true,
+    "outline": true
+  },
+  "moon":
+  {
+    "name": "Moon",
+    "filled": true,
+    "svg": true,
+    "description": "*general,dark,theme",
+    "id": "Moon",
+    "png": true,
+    "outline": true
+  },
+  "sun":
+  {
+    "name": "Sun",
+    "filled": true,
+    "svg": true,
+    "description": "*general,light,theme",
+    "id": "Sun",
+    "png": true,
+    "outline": true
+  },
+  "credit-card":
+  {
+    "name": "Credit card",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "CreditCard",
+    "png": true,
+    "outline": true
+  },
+  "calendar":
+  {
+    "name": "Calendar",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Calendar",
+    "png": true,
+    "outline": true
+  },
+  "photo":
+  {
+    "name": "Photo",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Photo",
+    "png": true,
+    "outline": true
+  },
+  "point-of-sale":
+  {
+    "name": "Point of sale",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "PointOfSale",
+    "png": true,
+    "outline": true
+  },
+  "bell":
+  {
+    "name": "Bell",
+    "filled": true,
+    "svg": true,
+    "description": "*general,notification",
+    "id": "Bell",
+    "png": true,
+    "outline": true
+  },
+  "invoice":
+  {
+    "name": "Invoice",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Invoice",
+    "png": true,
+    "outline": true
+  },
+  "transactions":
+  {
+    "name": "Transactions",
+    "filled": true,
+    "svg": true,
+    "description": "*general,payments",
+    "id": "Transactions",
+    "png": true,
+    "outline": true
+  },
+  "code":
+  {
+    "name": "Code",
+    "filled": true,
+    "svg": true,
+    "description": "*general,development",
+    "id": "Code",
+    "png": true,
+    "outline": true
+  },
+  "rocket":
+  {
+    "name": "Rocket",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "Rocket",
+    "png": true,
+    "outline": true
+  },
+  "brush":
+  {
+    "name": "Brush",
+    "filled": true,
+    "svg": true,
+    "description": "*general,theme",
+    "id": "Brush",
+    "png": true,
+    "outline": true
+  },
+  "refresh":
+  {
+    "name": "Refresh",
+    "filled": true,
+    "svg": true,
+    "description": "*general,reload,restart",
+    "id": "Refresh",
+    "png": true,
+    "outline": true
+  },
+  "confirmations-2":
+  {
+    "name": "Confirmations 2",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Confirmations2",
+    "png": true,
+    "outline": true
+  },
+  "confirmations-3":
+  {
+    "name": "Confirmations 3",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Confirmations3",
+    "png": true,
+    "outline": true
+  },
+  "confirmations-0":
+  {
+    "name": "Confirmations 0",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Confirmations0",
+    "png": true,
+    "outline": true
+  },
+  "confirmations-1":
+  {
+    "name": "Confirmations 1",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Confirmations1",
+    "png": true,
+    "outline": true
+  },
+  "confirmations-5":
+  {
+    "name": "Confirmations 5",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Confirmations5",
+    "png": true,
+    "outline": true
+  },
+  "confirmations-6":
+  {
+    "name": "Confirmations 6",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Confirmations6",
+    "png": true,
+    "outline": true
+  },
+  "confirmations-4":
+  {
+    "name": "Confirmations 4",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Confirmations4",
+    "png": true,
+    "outline": true
+  },
+  "tag":
+  {
+    "name": "Tag",
+    "filled": true,
+    "svg": true,
+    "description": "*general,price",
+    "id": "Tag",
+    "png": true,
+    "outline": true
+  },
+  "pie-chart":
+  {
+    "name": "Pie chart",
+    "filled": true,
+    "svg": true,
+    "description": "*general,fee",
+    "id": "PieChart",
+    "png": true,
+    "outline": true
+  },
+  "coins":
+  {
+    "name": "Coins",
+    "filled": true,
+    "svg": true,
+    "description": "*bitcoin",
+    "id": "Coins",
+    "png": true,
+    "outline": true
+  },
+  "pantheon":
+  {
+    "name": "Pantheon",
+    "filled": true,
+    "svg": true,
+    "description": "*general,bank,account",
+    "id": "Pantheon",
+    "png": true,
+    "outline": true
+  },
+  "globe":
+  {
+    "name": "Globe",
+    "filled": true,
+    "svg": true,
+    "description": "*general,language",
+    "id": "Globe",
+    "png": true,
+    "outline": true
+  },
+  "address-book":
+  {
+    "name": "Address book",
+    "filled": true,
+    "svg": true,
+    "description": "*general",
+    "id": "AddressBook",
+    "png": true,
+    "outline": true
+  },
+  "relay":
+  {
+    "name": "Relay",
+    "filled": true,
+    "svg": true,
+    "description": "*general,tor,onion,privacy",
+    "id": "Relay",
+    "png": true,
+    "outline": true
+  }
+}

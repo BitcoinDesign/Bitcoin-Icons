@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <ellipse cx="12" cy="12.006" rx="3.095" ry="7.998"/>
   <circle cx="12" cy="12" r="8"/>
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4 11.995l16 .01"/>
+  <path stroke-linecap="round" stroke-linejoin="round" d="m4 11.995 16 .01"/>
 </svg>

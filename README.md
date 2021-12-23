@@ -92,3 +92,33 @@ export default {
 The outline icons can be imported from `@bitcoin-design/bitcoin-icons-vue/outline`, and the filled icons can be imported from `@bitcoin-design/bitcoin-icons-vue/filled`.
 
 Icons use an upper camel case naming convention and are always suffixed with the word `Icon`.
+
+## React Native
+
+[![npm version](https://img.shields.io/npm/v/@bitcoin-design/bitcoin-icons-react-native.svg?style=flat-square)](https://www.npmjs.com/package/@bitcoin-design/bitcoin-icons-react-native)
+[![npm downloads](https://img.shields.io/npm/dm/@bitcoin-design/bitcoin-icons-react-native.svg?style=flat-square)](https://www.npmjs.com/package/@bitcoin-design/bitcoin-icons-react-native)
+
+First, install `@bitcoin-design/bitcoin-icons-react-native` from npm:
+
+```sh
+npm install @bitcoin-design/bitcoin-icons-react-native
+```
+
+Now each icon can be imported individually as a React component:
+
+```js
+import { BitcoinIcon } from '@bitcoin-design/bitcoin-icons-react-native/filled'
+
+function MyComponent() {
+  return (
+    <div>
+      <BitcoinIcon size={10} color={'#F7931A'} />
+      <p>...</p>
+    </div>
+  )
+}
+```
+
+The outline icons can be imported from `@bitcoin-design/bitcoin-icons-react-native/outline`, and the filled icons can be imported from `@bitcoin-design/bitcoin-icons-react-native/filled`.
+
+Icons use an upper camel case naming convention and are always suffixed with the word `Icon`.

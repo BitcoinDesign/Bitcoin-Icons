@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <rect width="14" height="10" x="5" y="10.989" rx="2"/>
-  <path stroke-linecap="round" d="M15.5 8l-.008-1.742a1.5 1.5 0 00-1.5-1.494H10.014a1.5 1.5 0 00-1.5 1.5v4.73"/>
+  <path stroke-linecap="round" d="m15.5 8-.008-1.742a1.5 1.5 0 0 0-1.5-1.494H10.014a1.5 1.5 0 0 0-1.5 1.5v4.73"/>
 </svg>
