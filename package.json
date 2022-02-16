@@ -1,6 +1,6 @@
 {
   "name": "@bitcoin-design/bitcoin-icons",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "About",
   "main": "index.js",
   "scripts": {
