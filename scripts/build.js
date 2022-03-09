@@ -6,6 +6,9 @@ const svgr = require('@svgr/core').default
 const babel = require('@babel/core')
 const { compile: compileVue } = require('@vue/compiler-dom')
 
+const rawTypeDefinition = `declare const iconData: { name: string; svg: string; };
+export default iconData;`;
+
 let transform = {
   react: async (svg, componentName, format) => {
     let component = await svgr(svg, {}, { componentName })
@@ -43,6 +46,20 @@ let transform = {
         }
       )
       .replace('export function render', 'module.exports = function render')
+  },
+  raw: (svg, componentName, format, type) => {
+    let code = `const iconData = {
+  name: "${componentName}",
+  svg: \`${svg.trim()}\`,
+};
+
+module.exports = iconData;`
+
+    if (format === 'esm') {
+      return code.replace('\n\nmodule.exports = iconData;', '').replace('\n\nmodule.exports = iconData;', 'const iconData = {', 'export default const iconData = {')
+    }
+
+    return code;
   },
 }
 
@@ -89,6 +106,10 @@ async function buildIcons(package, style, format) {
         types = `import * as React from 'react';\ndeclare function ${componentName}(props: React.ComponentProps<'svg'>): JSX.Element;\nexport default ${componentName};\n`
       }
 
+      if (package === 'raw') {
+        types = rawTypeDefinition;
+      }
+
       return [
         fs.writeFile(`${outDir}/${componentName}.js`, content, 'utf8'),
         ...(types ? [fs.writeFile(`${outDir}/${componentName}.d.ts`, types, 'utf8')] : []),
@@ -98,7 +119,7 @@ async function buildIcons(package, style, format) {
 
   await fs.writeFile(`${outDir}/index.js`, exportAll(icons, format), 'utf8')
 
-  if (package === 'react') {
+  if (package === 'react' || package === 'raw') {
     await fs.writeFile(`${outDir}/index.d.ts`, exportAll(icons, 'esm', false), 'utf8')
   }
 }

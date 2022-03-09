@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "prepublishOnly": "npm run build",
-    "build": "npm run build-outline && npm run build-filled && npm run build-react && npm run build-vue",
+    "build": "npm run build-outline && npm run build-filled && npm run build-react && npm run build-vue && npm run build-raw",
     "build-react": "node ./scripts/build.js react",
     "build-vue": "node ./scripts/build.js vue",
+    "build-raw": "node ./scripts/build.js raw",
     "build-outline": "rimraf ./outline ./optimized/outline && svgo --config=svgo.outline.yaml -f ./svg/outline -o ./optimized/outline --pretty --indent=2 && cp -R ./optimized/outline ./outline",
     "build-filled": "rimraf ./filled ./optimized/filled && svgo --config=svgo.filled.yaml -f ./svg/filled -o ./optimized/filled --pretty --indent=2 && cp -R ./optimized/filled ./filled"
   },
