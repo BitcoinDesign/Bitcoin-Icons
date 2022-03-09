@@ -14,6 +14,10 @@ Bitcoin Icons is a sister project of the [Bitcoin Wallet UI Kit](https://www.fig
 
 For info on how to contribute please see the [contribution guidelines](CONTRIBUTING.md). Also see details on the [release process](RELEASES.md).
 
+## SVG Download
+
+You can download all icons for local use from the [releases page](https://github.com/BitcoinDesign/Bitcoin-Icons/releases). 
+
 ## Node Module
 
 The node module is still in development. For now, you can install it and then pull
@@ -26,7 +30,7 @@ To install the node module pre-release version, run:
 npm install @bitcoin-design/bitcoin-icons
 ```
 
-## React
+## React module
 
 [![npm version](https://img.shields.io/npm/v/@bitcoin-design/bitcoin-icons-react.svg?style=flat-square)](https://www.npmjs.com/package/@bitcoin-design/bitcoin-icons-react)
 [![npm downloads](https://img.shields.io/npm/dm/@bitcoin-design/bitcoin-icons-react.svg?style=flat-square)](https://www.npmjs.com/package/@bitcoin-design/bitcoin-icons-react)
@@ -57,7 +61,7 @@ The outline icons can be imported from `@bitcoin-design/bitcoin-icons-react/outl
 Icons use an upper camel case naming convention and are always suffixed with the word `Icon`.
 
 
-## Vue
+## Vue module
 
 [![npm version](https://img.shields.io/npm/v/@bitcoin-design/bitcoin-icons-vue.svg?style=flat-square)](https://www.npmjs.com/package/@bitcoin-design/bitcoin-icons-vue)
 [![npm downloads](https://img.shields.io/npm/dm/@bitcoin-design/bitcoin-icons-vue.svg?style=flat-square)](https://www.npmjs.com/package/@bitcoin-design/bitcoin-icons-vue)
@@ -90,5 +94,34 @@ export default {
 ```
 
 The outline icons can be imported from `@bitcoin-design/bitcoin-icons-vue/outline`, and the filled icons can be imported from `@bitcoin-design/bitcoin-icons-vue/filled`.
+
+Icons use an upper camel case naming convention and are always suffixed with the word `Icon`.
+
+
+## SVG module
+
+[![npm version](https://img.shields.io/npm/v/@bitcoin-design/bitcoin-icons-svg.svg?style=flat-square)](https://www.npmjs.com/package/@bitcoin-design/bitcoin-icons-svg)
+[![npm downloads](https://img.shields.io/npm/dm/@bitcoin-design/bitcoin-icons-svg.svg?style=flat-square)](https://www.npmjs.com/package/@bitcoin-design/bitcoin-icons-svg)
+
+First, install `@bitcoin-design/bitcoin-icons-svg` from npm:
+
+```sh
+npm install @bitcoin-design/bitcoin-icons-svg
+```
+
+Now each icon can be imported individually as a Vue component:
+
+```js
+import { BitcoinIcon } from '@bitcoin-design/bitcoin-icons-svg/filled'
+
+console.log(BitcoinIcon)
+// ==>
+// {
+//   name: 'bitcoin',
+//   svg: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">...</svg>'
+// };
+```
+
+The outline icons can be imported from `@bitcoin-design/bitcoin-icons-svg/outline`, and the filled icons can be imported from `@bitcoin-design/bitcoin-icons-svg/filled`.
 
 Icons use an upper camel case naming convention and are always suffixed with the word `Icon`.
