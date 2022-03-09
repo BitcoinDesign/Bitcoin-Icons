@@ -52,41 +52,56 @@ npm install {{ your workspace directory }}/Bitcoin-Icons/react
 npm start
 ```
 
-### 6. Push icon updates to Github
+### 6. Test the SVG module
 
-Increase version numbers in the 3 package.json files (main folder, vue folder, react folder).
+There is a [simple test project](https://github.com/GBKS/bitcoin-icons-svg-test) you can use.
+
+```
+npm i
+npm uninstall @bitcoin-design/bitcoin-icons-svg
+npm install {{ your workspace directory }}/Bitcoin-Icons/raw
+npm run serve
+```
+
+### 7. Push icon updates to Github
+
+Increase version numbers in the 4 package.json files (main folder, vue folder, react folder, raw folder).
 Update the 3 README files as needed (main folder, vue folder, react folder).
 
 If everything looks good, create a branch and PR with the updated icons. Name it like "Milestone 0.1.7". Get it reviewed and merged.
 
-### 7. Publish the Vue module
+### 8. Publish the Vue module
 
 From the `/vue` folder, run `npm publish`.
 
-### 8. Publish the React module
+### 9. Publish the React module
 
 From the `/react` folder, run `npm publish`.
 
-### 9. Publish the release
+### 10. Publish the SVG module
+
+From the `/raw` folder, run `npm publish`.
+
+### 11. Publish the release
 
 This is the ZIP file linked to from the site to download all icon SVGs at once.
 Create a release branch that only includes the icons.
 Link it to the milestone.
 Create the release.
 
-### 10. Re-publish the Figma file
+### 12. Re-publish the Figma file
 
 Re-publish the file to Figma community with the new version number and a short update.
 
-### 11. Update [bitcoinicons.com](https://github.com/GBKS/bitcoinicons.com)
+### 13. Update [bitcoinicons.com](https://github.com/GBKS/bitcoinicons.com)
 
 Update it to latest published version.
 Branch, PR, review & merge.
 
-### 12. Double-check
+### 14. Double-check
 
 Review it all to ensure the icons are looking badass.
 
-### 13. Prepare the next milestone
+### 15. Prepare the next milestone
 
 Create a new milestone that new issues can be added to.
