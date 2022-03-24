@@ -129,6 +129,6 @@ Icons use an upper camel case naming convention and are always suffixed with the
 
 ## Figma plugin
 
-![Bitcoin icons Figma plugin](img/Cover.png)
+![Bitcoin icons Figma plugin](img/Plugin.png)
 
 The source for the [Figma plugin](https://www.figma.com/community/plugin/1087677534293009133/Bitcoin-Icons) can be found in [this repository](https://github.com/GBKS/figma-bitcoin-icons).
