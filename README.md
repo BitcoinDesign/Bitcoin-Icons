@@ -1,10 +1,10 @@
-![banner image](https://github.com/Bosch-0/Bitcoin-Icons/blob/main/img/Cover.png)
+![Bitcoin icons cover image](img/Cover.png)
 
 # Bitcoin Icons (WIP)
 
 Bitcoin Icons is an open-source/open-design set of icons made for Bitcoin centric applications. Included are general icons most applications need like arrows and a home icon, and maybe more importantly Bitcoin-specific icons like a wallet, keys, miner and Bitcoin symbols.
 
-Icons are available as a [public Figma community file](https://www.figma.com/community/file/948545404023677970/Bitcoin-icon-set) for design work. This repository contains icon exports as SVGs for implementation.
+Icons are available as a [public Figma community file](https://www.figma.com/community/file/948545404023677970/Bitcoin-icon-set) for design work, with a [companion Figma plugin](https://www.figma.com/community/plugin/1087677534293009133/Bitcoin-Icons) for convenient browsing and insertion. This repository contains icon exports as SVGs for implementation.
 
 For requests, please leave a comment on the Figma file or post an issue to this repo. This could be new icons, improvements to existing icons, more style or export formats, or anything else. Just reach out.
 
@@ -125,3 +125,10 @@ console.log(BitcoinIcon)
 The outline icons can be imported from `@bitcoin-design/bitcoin-icons-svg/outline`, and the filled icons can be imported from `@bitcoin-design/bitcoin-icons-svg/filled`.
 
 Icons use an upper camel case naming convention and are always suffixed with the word `Icon`.
+
+
+## Figma plugin
+
+![Bitcoin icons Figma plugin](img/Cover.png)
+
+The source for the [Figma plugin](https://www.figma.com/community/plugin/1087677534293009133/Bitcoin-Icons) can be found in [this repository](https://github.com/GBKS/figma-bitcoin-icons).

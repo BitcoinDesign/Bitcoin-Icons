@@ -93,12 +93,16 @@ Create the release.
 
 Re-publish the file to Figma community with the new version number and a short update.
 
-### 13. Update [bitcoinicons.com](https://github.com/GBKS/bitcoinicons.com)
+### 13. Re-publish the Figma plugin
+
+Update the module in [the repo](https://github.com/GBKS/figma-bitcoin-icons), compile the plugin, test it, and re-publish the plugin to Figma community with the new version number and a short update.
+
+### 14. Update [bitcoinicons.com](https://github.com/GBKS/bitcoinicons.com)
 
 Update it to latest published version.
 Branch, PR, review & merge.
 
-### 14. Double-check
+### 15. Double-check
 
 Review it all to ensure the icons are looking badass.
 
