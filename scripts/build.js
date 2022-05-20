@@ -6,9 +6,6 @@ const svgr = require('@svgr/core').default
 const babel = require('@babel/core')
 const { compile: compileVue } = require('@vue/compiler-dom')
 
-const rawTypeDefinition = `declare const iconData: { name: string; svg: string; };
-export default iconData;`;
-
 let transform = {
   react: async (svg, componentName, format) => {
     let component = await svgr(svg, {}, { componentName })
@@ -102,12 +99,43 @@ async function buildIcons(package, style, format) {
       let content = await transform[package](svg, componentName, format)
       let types
 
-      if (package === 'react') {
-        types = `import * as React from 'react';\ndeclare function ${componentName}(props: React.ComponentProps<'svg'>): JSX.Element;\nexport default ${componentName};\n`
-      }
+      switch(package) {
+        case "react":
+          types = `import * as React from 'react';\ndeclare function ${componentName}(props: React.ComponentProps<'svg'>): JSX.Element;\nexport default ${componentName};\n`;
+          break;
+        case "raw":
+          types = `declare const ${componentName}: { name: string; svg: string; };\nexport default ${componentName};`;
+          break;
+        case "vue":
+          types = `import {
+  DefineComponent,
+  VNode,
+  RendererNode,
+  RendererElement,
+  ComponentOptionsMixin,
+  ComponentProvideOptions
+} from "vue";
 
-      if (package === 'raw') {
-        types = rawTypeDefinition;
+declare let ${componentName}: DefineComponent<
+  {},
+  () => VNode<
+    RendererNode,
+    RendererElement
+  > | null,
+  unknown,
+  {},
+  {},
+  ComponentOptionsMixin,
+  ComponentOptionsMixin,
+  Record<string, any>,
+  string,
+  ComponentProvideOptions,
+  {},
+  {}
+>;
+
+export default ${componentName};`;
+          break;
       }
 
       return [
@@ -119,7 +147,7 @@ async function buildIcons(package, style, format) {
 
   await fs.writeFile(`${outDir}/index.js`, exportAll(icons, format), 'utf8')
 
-  if (package === 'react' || package === 'raw') {
+  if (package === 'react' || package === 'raw'  || package === 'vue') {
     await fs.writeFile(`${outDir}/index.d.ts`, exportAll(icons, 'esm', false), 'utf8')
   }
 }
