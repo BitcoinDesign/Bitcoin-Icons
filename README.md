@@ -14,6 +14,13 @@ Bitcoin Icons is a sister project of the [Bitcoin Wallet UI Kit](https://www.fig
 
 For info on how to contribute please see the [contribution guidelines](CONTRIBUTING.md). Also see details on the [release process](RELEASES.md).
 
+## Folders
+
+- 'SVG' contains the original icon files as exported from Figma
+- 'optimized' contains the same files, but optimized via [SVGO](https://github.com/svg/svgo)
+
+The other folders define the npm modules, Figma plugin, images used in this README, etc.
+
 ## SVG Download
 
 You can download all icons for local use from the [releases page](https://github.com/BitcoinDesign/Bitcoin-Icons/releases). 
