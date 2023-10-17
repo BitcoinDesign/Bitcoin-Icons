@@ -409,7 +409,7 @@ const textNode = figma.createText()
 textNode.x = 1000
 textNode.resize(1000, 1000)
 
-figma.loadFontAsync({ family: "Roboto", style: "Regular" }).then(() => {
+figma.loadFontAsync({ family: "Inter", style: "Regular" }).then(() => {
 	textNode.characters = JSON.stringify(iconData)
 
 	figma.closePlugin()
